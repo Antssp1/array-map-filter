@@ -58,9 +58,51 @@ En sortie:
   ]
 
  */
+const array1 =  [
+  {
+    name: 'Crazy Rich Asians',
+    rating: 93,
+  },
+  {
+    name: 'Skyscraper',
+    rating: 46,
+  },
+  {
+    name: 'Leave No Trace',
+    rating: 100,
+  },
+  {
+    name: 'White Boy Rick',
+    rating: 60,
+  }
+]
 
-function getMoviesFreshness(movies) {
+
+
+
+function getMoviesFreshness(array) {
+const test = array.map(function(objects){
+
+    if (objects.rating < 60 ){
+      objects.label = "rotten";
+    }
+    if(objects.rating >= 60 && objects.rating <= 75){
+      objects.label = "fresh";
+    }
+    if (objects.rating > 75){
+      objects.label = "certified fresh";
+
+
+
+    }
+  });
+
+return array
 }
+
+
+getMoviesFreshness (array1)
+
 
 
 

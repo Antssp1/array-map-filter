@@ -15,8 +15,17 @@ Exemple d'entrée:
 
  */
 
+let array1 = [-12, -10, -7, -1, 5, 8, 11, 15, 20, 27];
+
 function getMultiplesOf(numbers, n) {
+  const test = numbers.filter(function(objects){
+    if (objects % n == 0){
+      return objects
+    }
+  });
+  return test
 }
+getMultiplesOf(array1)
 
 // Ne pas modifier l'export
 module.exports = getMultiplesOf;
